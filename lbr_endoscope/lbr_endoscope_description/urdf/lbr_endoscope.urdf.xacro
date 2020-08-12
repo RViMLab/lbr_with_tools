@@ -27,6 +27,6 @@
     </xacro:med7>
 
     <!-- insert endoscope -->
-    <xacro:endoscope parent="$(arg robot_name)_link_ee" endoscope_name="$(arg endoscope_name)"/>
+    <xacro:endoscope parent="$(arg robot_name)_link_ee" robot_name="$(arg robot_name)" endoscope_name="$(arg endoscope_name)"/>
 
 </robot> 
