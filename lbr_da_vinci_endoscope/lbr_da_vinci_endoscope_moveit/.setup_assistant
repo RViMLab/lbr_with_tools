@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: lbr_da_vinci_endoscope_description
+    relative_path: urdf/lbr_da_vinci_endoscope.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/lbr_da_vinci_endoscope.srdf
+  CONFIG:
+    author_name: mhubii
+    author_email: m.huber_1994@hotmail.de
+    generated_timestamp: 1592784287
