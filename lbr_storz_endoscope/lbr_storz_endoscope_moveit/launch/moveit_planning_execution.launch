@@ -6,9 +6,18 @@
     <arg name="robot_name" default="lbr" />
     <arg name="model" default="med7"/>
 
-    <!-- load fri node or simulation -->
+    <!-- load simulation -->
     <group if="$(arg sim)">
         <include file="$(find lbr_storz_endoscope_gazebo)/launch/lbr_storz_endoscope_gazebo.launch">
+            <arg name="hardware_interface" value="$(arg hardware_interface)" />
+            <arg name="robot_name" value="$(arg robot_name)" />
+            <arg name="model" value="$(arg model)"/>
+        </include>
+    </group>
+
+    <!-- load real robot -->
+    <group unless="$(arg sim)" ns="$(arg robot_name)">
+        <include file="$(find lbr_fri_ros)/launch/lbr_fri_ros.launch">
             <arg name="hardware_interface" value="$(arg hardware_interface)" />
             <arg name="robot_name" value="$(arg robot_name)" />
             <arg name="model" value="$(arg model)"/>
