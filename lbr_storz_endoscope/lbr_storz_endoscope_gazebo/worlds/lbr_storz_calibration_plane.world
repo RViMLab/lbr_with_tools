@@ -4,6 +4,8 @@
 
     <world name="lbr_calibration_plane">
 
+        <gravity>0. 0. 0.</gravity>
+
         <!-- Global light source -->
         <include>
             <uri>model://sun</uri>
