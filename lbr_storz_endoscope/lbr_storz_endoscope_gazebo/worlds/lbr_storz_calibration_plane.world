@@ -13,7 +13,7 @@
 
         <!-- Calibration plane -->
         <include>
-            <pose>2.145429 -2.346968 -1.901730 0.957171 0.244602 -2.889213</pose>
+            <pose>2.092044 -2.066539 -1.700781 0.921534 0.268863 -2.868423</pose>
             <uri>model://calibration_plane</uri>
         </include>
 
