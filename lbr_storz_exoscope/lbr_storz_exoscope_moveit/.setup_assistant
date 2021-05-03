@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: lbr_storz_exoscope_description
+    relative_path: urdf/lbr_storz_exoscope.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/lbr_storz_exoscope.srdf
+  CONFIG:
+    author_name: mhubii
+    author_email: martin.huber@kcl.ac.uk
+    generated_timestamp: 1620036412
