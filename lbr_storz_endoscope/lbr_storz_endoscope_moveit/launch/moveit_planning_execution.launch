@@ -30,7 +30,7 @@
             <arg name="hardware_interface" value="$(arg hardware_interface)"/>
             <arg name="model" value="$(arg model)"/>
         </include>
-        <!-- <include file="$(find lbr_storz_endoscope_moveit)/launch/moveit_rviz.launch"/> -->
+        <include file="$(find lbr_storz_endoscope_moveit)/launch/moveit_rviz.launch"/>
     </group>
 
 </launch>
