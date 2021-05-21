@@ -21,6 +21,9 @@
 
   <arg name="capabilities" default=""/>
   <arg name="disable_capabilities" default=""/>
+  <arg name="hardware_interface" default="PositionJointInterface"/>
+  <arg name="robot_name" default="lbr"/>
+  <arg name="model" default="med7"/>
   <!-- load these non-default MoveGroup capabilities (space seperated) -->
   <!--
   <arg name="capabilities" value="
@@ -41,6 +44,9 @@
   <!-- load URDF, SRDF and joint_limits configuration -->
   <include file="$(find lbr_storz_tilt_endoscope_moveit)/launch/planning_context.launch">
     <arg name="load_robot_description" value="$(arg load_robot_description)" />
+    <arg name="hardware_interface" value="$(arg hardware_interface)"/>
+    <arg name="robot_name" value="$(arg robot_name)"/>
+    <arg name="model" value="$(arg model)"/>
   </include>
 
   <!-- Planning Functionality -->
@@ -50,6 +56,7 @@
 
   <!-- Trajectory Execution Functionality -->
   <include ns="move_group" file="$(find lbr_storz_tilt_endoscope_moveit)/launch/trajectory_execution.launch.xml" if="$(arg allow_trajectory_execution)">
+    <arg name="hardware_interface" value="$(arg hardware_interface)"/>
     <arg name="moveit_manage_controllers" value="true" />
     <arg name="moveit_controller_manager" value="lbr_storz_tilt_endoscope" unless="$(arg fake_execution)"/>
     <arg name="moveit_controller_manager" value="fake" if="$(arg fake_execution)"/>
