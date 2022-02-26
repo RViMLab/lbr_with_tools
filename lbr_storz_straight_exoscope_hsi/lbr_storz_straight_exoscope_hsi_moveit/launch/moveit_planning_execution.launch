@@ -1,0 +1,36 @@
+<launch>
+
+    <!-- define arguments -->
+    <arg name="sim" default="true"/>
+    <arg name="hardware_interface" default="PositionJointInterface" />
+    <arg name="robot_name" default="lbr" />
+    <arg name="model" default="med7"/>
+
+    <!-- load simulation -->
+    <group if="$(arg sim)">
+        <include file="$(find lbr_storz_straight_exoscope_hsi_gazebo)/launch/lbr_storz_straight_exoscope_hsi_gazebo.launch">
+            <arg name="hardware_interface" value="$(arg hardware_interface)" />
+            <arg name="robot_name" value="$(arg robot_name)" />
+            <arg name="model" value="$(arg model)"/>
+        </include>
+    </group>
+
+    <!-- load real robot -->
+    <group unless="$(arg sim)" ns="$(arg robot_name)">
+        <include file="$(find lbr_fri_ros)/launch/lbr_fri_ros.launch">
+            <arg name="hardware_interface" value="$(arg hardware_interface)" />
+            <arg name="robot_name" value="$(arg robot_name)" />
+            <arg name="model" value="$(arg model)"/>
+        </include>
+    </group>
+
+    <!-- load movegroup -->
+    <group ns="$(arg robot_name)">
+        <include file="$(find lbr_storz_straight_exoscope_hsi_moveit)/launch/move_group.launch">
+            <arg name="hardware_interface" value="$(arg hardware_interface)"/>
+            <arg name="model" value="$(arg model)"/>
+        </include>
+        <include file="$(find lbr_storz_straight_exoscope_hsi_moveit)/launch/moveit_rviz.launch"/>
+    </group>
+
+</launch>

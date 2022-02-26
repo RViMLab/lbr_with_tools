@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<!-- Here we define the robot, we named it "lbr_storz_straight_exoscope_hsi" -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="lbr_storz_straight_exoscope_hsi">
+
+    <!--Import the lbr med7 macro -->
+    <xacro:include filename="$(find lbr_description)/urdf/med7.xacro"/>
+
+    <!-- Include exoscope xacro -->
+    <xacro:include filename="$(find storz_straight_exoscope_hsi_description)/urdf/storz_straight_exoscope_hsi.xacro"/>
+
+    <!--  Arguments for the med7 macro  -->
+    <xacro:arg name="hardware_interface" default="PositionJointInterface"/>
+    <xacro:arg name="robot_name" default="lbr"/>
+    <xacro:arg name="origin_xyz" default="0 0 0"/>
+    <xacro:arg name="origin_rpy" default="0 0 0"/>
+
+    <!-- Arguments for exoscope xacro -->
+    <xacro:arg name="exoscope_name" default="storz_straight_exoscope_hsi"/>
+
+    <!-- fix to world -->
+    <link name="world"/>
+
+    <!-- lbr -->
+    <xacro:med7 hardware_interface="$(arg hardware_interface)" parent="world" robot_name="$(arg robot_name)">
+        <origin xyz="$(arg origin_xyz)" rpy="$(arg origin_rpy)" />
+    </xacro:med7>
+
+    <!-- insert exoscope -->
+    <xacro:storz_straight_exoscope_hsi parent="$(arg robot_name)_link_ee" robot_name="$(arg robot_name)" exoscope_name="$(arg exoscope_name)"/>
+
+</robot> 
