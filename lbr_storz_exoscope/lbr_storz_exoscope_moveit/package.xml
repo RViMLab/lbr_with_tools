@@ -1,20 +1,22 @@
-<package format="2">
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
 
   <name>lbr_storz_exoscope_moveit</name>
-  <version>0.3.0</version>
+  <version>1.0.0</version>
   <description>
      An automatically generated package with all the configuration and launch files for using the lbr_storz_exoscope with the MoveIt! Motion Planning Framework
   </description>
   <author email="martin.huber@kcl.ac.uk">mhubii</author>
   <maintainer email="martin.huber@kcl.ac.uk">mhubii</maintainer>
 
-  <license>BSD</license>
+  <license>MIT</license>
 
   <url type="website">http://moveit.ros.org/</url>
   <url type="bugtracker">https://github.com/ros-planning/moveit/issues</url>
   <url type="repository">https://github.com/ros-planning/moveit</url>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
   <exec_depend>moveit_ros_move_group</exec_depend>
   <exec_depend>moveit_fake_controller_manager</exec_depend>
@@ -29,7 +31,9 @@
   <exec_depend>xacro</exec_depend>
   <!-- This package is referenced in the warehouse launch files, but does not build out of the box at the moment. Commented the dependency until this works. -->
   <!-- <exec_depend>warehouse_ros_mongo</exec_depend> -->
-    <exec_depend>lbr_storz_exoscope_description</exec_depend>
+  <exec_depend>lbr_storz_exoscope_description</exec_depend>
 
-
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>

@@ -1,10 +1,12 @@
-cmake_minimum_required(VERSION 3.1.3)
+cmake_minimum_required(VERSION 3.5)
 project(lbr_storz_tilt_endoscope_moveit)
 
-find_package(catkin REQUIRED)
+find_package(ament_cmake REQUIRED)
 
-catkin_package()
+install(
+    DIRECTORY launch config
+    PATTERN "setup_assistant.launch" EXCLUDE
+    DESTINATION share/${PROJECT_NAME}
+)
 
-install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-  PATTERN "setup_assistant.launch" EXCLUDE)
-install(DIRECTORY config DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+ament_package()

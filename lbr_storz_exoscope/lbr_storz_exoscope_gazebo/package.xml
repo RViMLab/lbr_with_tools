@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
-<package format="2">
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>lbr_storz_exoscope_gazebo</name>
   <version>1.0.0</version>
   <description>lbr_storz_exoscope_gazebo</description>
   <maintainer email="m.huber_1994@hotmail.de">mhubii</maintainer>
-  <license>BSD</license>
+  <license>MIT</license>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
   <exec_depend>gazebo_plugins</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>
@@ -17,5 +19,6 @@
   <exec_depend>xacro</exec_depend>
 
   <export>
-  </export>
+    <build_type>ament_cmake</build_type>
+  </export> 
 </package>
