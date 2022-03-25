@@ -7,8 +7,8 @@
   <description>
      An automatically generated package with all the configuration and launch files for using the lbr_da_vinci_endoscope with the MoveIt! Motion Planning Framework
   </description>
-  <author email="m.huber_1994@hotmail.de">mhubii</author>
-  <maintainer email="m.huber_1994@hotmail.de">mhubii</maintainer>
+  <author email="martin.huber@kcl.ac.uk">mhubii</author>
+  <maintainer email="martin.huber@kcl.ac.uk">mhubii</maintainer>
 
   <license>MIT</license>
 
