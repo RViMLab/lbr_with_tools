@@ -4,7 +4,7 @@ project(lbr_da_vinci_endoscope_description)
 find_package(ament_cmake REQUIRED)
 
 install(
-    DIRECTORY launch urdf
+    DIRECTORY urdf
     DESTINATION share/${PROJECT_NAME}
 )
 

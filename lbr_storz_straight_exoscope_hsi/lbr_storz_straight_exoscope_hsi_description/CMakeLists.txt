@@ -4,7 +4,7 @@ project(lbr_storz_straight_exoscope_hsi_description)
 find_package(ament_cmake REQUIRED)
 
 install(
-    DIRECTORY launch urdf
+    DIRECTORY urdf
     DESTINATION share/${PROJECT_NAME}
 )
 
