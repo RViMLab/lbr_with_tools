@@ -11,6 +11,7 @@
 
     <!--  Arguments for the med7 macro  -->
     <xacro:arg name="robot_name" default="lbr"/>
+    <xacro:arg name="sim" default="true"/>
 
     <!-- Arguments for endoscope xacro -->
     <xacro:arg name="endoscope_name" default="da_vinci_endoscope"/>
