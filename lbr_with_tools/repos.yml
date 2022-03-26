@@ -3,6 +3,10 @@ repositories:
     type: git
     url: https://github.com/KCL-BMEIS/lbr_fri_ros2_stack.git
     version: foxy
+  fri:
+    type: git
+    url: https://github.com/KCL-BMEIS/fri
+    version: ros2_hwi-dev
   lbr_tools:
     type: git
     url: https://github.com/RViMLab/lbr_tools.git
