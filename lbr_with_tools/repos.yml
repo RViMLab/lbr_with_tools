@@ -10,8 +10,8 @@ repositories:
   lbr_tools:
     type: git
     url: https://github.com/RViMLab/lbr_tools.git
-    version: foxy
+    version: main
   lbr_with_tools:
     type: git
     url: https://github.com/RViMLab/lbr_with_tools.git
-    version: foxy
+    version: main

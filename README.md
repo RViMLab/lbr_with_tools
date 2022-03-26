@@ -4,7 +4,7 @@ KUKA LBR med7 R800 robot with tools.
 ## Build
 ```shell
 mkdir -p lbr_with_tools_ws/src && cd lbr_with_tools_ws && \
-wget https://raw.githubusercontent.com/RViMLab/lbr_with_tools/foxy/lbr_with_tools/repos.yml -P src && \
+wget https://raw.githubusercontent.com/RViMLab/lbr_with_tools/main/lbr_with_tools/repos.yml -P src && \
 vcs import src < src/repos.yml && \
 colcon build
 ```
