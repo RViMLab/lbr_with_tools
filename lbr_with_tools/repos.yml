@@ -1,0 +1,5 @@
+repositories:
+  lbr_with_tools:
+    type: git
+    url: https://github.com/RViMLab/lbr_with_tools.git
+    version: foxy
