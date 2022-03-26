@@ -9,6 +9,8 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <exec_depend>lbr_fri_ros2_stack</exec_depend>
+  <exec_depend>lbr_tools</exec_depend>
   <exec_depend>lbr_da_vinci_endoscope</exec_depend>
   <exec_depend>lbr_storz_endoscope</exec_depend>
   <exec_depend>lbr_storz_exoscope</exec_depend>

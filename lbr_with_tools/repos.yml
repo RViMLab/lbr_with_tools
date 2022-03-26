@@ -1,4 +1,12 @@
 repositories:
+  lbr_fri_ros2_stack:
+    type: git
+    url: https://github.com/KCL-BMEIS/lbr_fri_ros2_stack.git
+    version: foxy
+  lbr_tools:
+    type: git
+    url: https://github.com/RViMLab/lbr_tools.git
+    version: foxy
   lbr_with_tools:
     type: git
     url: https://github.com/RViMLab/lbr_with_tools.git
