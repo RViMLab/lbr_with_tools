@@ -11,11 +11,11 @@
 
   <exec_depend>lbr_fri_ros2_stack</exec_depend>
   <exec_depend>lbr_tools</exec_depend>
-  <exec_depend>lbr_da_vinci_endoscope</exec_depend>
-  <exec_depend>lbr_storz_endoscope</exec_depend>
-  <exec_depend>lbr_storz_exoscope</exec_depend>
-  <exec_depend>lbr_storz_straight_exoscope_hsi</exec_depend>
-  <exec_depend>lbr_storz_tilt_endoscope</exec_depend>
+  <exec_depend>lbr_da_vinci_endoscope_description</exec_depend>
+  <exec_depend>lbr_storz_endoscope_description</exec_depend>
+  <exec_depend>lbr_storz_exoscope_description</exec_depend>
+  <exec_depend>lbr_storz_straight_exoscope_hsi_description</exec_depend>
+  <exec_depend>lbr_storz_tilt_endoscope_description</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
